@@ -4,3 +4,21 @@
 #  Сделайте несколько вариантов решений:
 #  1) Просто цикл с условием.
 #  2) Воспользуйтесь функцией filter, для чего создайте функцию проверки числа больше x
+
+l = [1, 23, 4, 5, 6, 76, 8]
+n = 8
+
+
+def suare(lst, x):
+    m = []
+    for i in lst:
+        if i > x:
+            m.append((i * i))
+    return m
+
+def square2(lst, x):
+    m = list(filter(lambda  k:k>x, lst))
+    return [ s*s for s in m]
+
+print(suare(l,n))
+print(square2(l,n))
